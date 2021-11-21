@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-image: url(back2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    .cont {
+
+        margin-top: 50px;
+        margin-left: 550px;
+        height: 210px;
+        width: 210px;
+
+
+
+
+    }
+
+    .p1 {
+        color: darkblue;
+        margin-left: 450px;
+        font-size: 70px;
+        margin-top: -15px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+
+    }
+
+    .nav {
+
+
+        bottom: 0;
+        float: left;
+        width: 100%;
+        height: 70px;
+        background-color: orange;
+        position: fixed;
+        align-items: center;
+
+        text-align: center;
+
+    }
+
+    a {
+        font-size: 25px;
+        margin-left: 50px;
+        text-decoration: none;
+        margin-top: 30px;
+        color: black;
+
+
+
+
+
+    }
+
+    a:hover {
+        background: #f1f1f1;
+        background-color: white
+    }
+
+    button {
+        margin-left: 580px;
+        height: 60px;
+        width: 150px;
+
+        background-color: orange;
+        border: none;
+        font-size: 17px;
+        color: white;
+
+
+    }
+
+    .log {
+        height: 300px;
+
+        width: 300px;
+        background-image: url(ww.jpg);
+        margin-left: 980px;
+        border-radius: 40px;
+        background-size: cover;
+        margin-top: -540px;
+        display: none;
+    }
+
+    .input {
+        margin-left: 20px;
+
+
+        margin-top: 30px;
+        font-size: 5px;
+
+
+
+    }
+
+    table {
+        border-spacing: 10px;
+    }
+
+
+
+    td {
+        font-size: 20px;
+        color: black;
+
+
+    }
+
+    input {
+        border-radius: 20px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="cont">
+        <img src="C:\Users\Lenovo\Desktop\blachhearts.png" style="height: 200px; width: 200px;">
+        <p
+            style="margin-top: -67%; margin-left: 72px; color: chartreuse; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 50px;">
+            EAT</p>
+
+    </div>
+    <div>
+        <p class="p1"> WE <span style="color: orangered; margin-left: 20px;">ARE</span><span
+                style="color: red; margin-left: 30px;">SMART</span></p>
+        <pre
+            style="font-size: 30px; color: white; margin-left: 350px; margin-top: -50px; font-family: cursive ;color:white ;"> GET START <span style="color: black;">  YOUR NEXT </span> <span style="color:blue;"> AWESOME PROJECT</span></pre>
+        <button>EAT & CHAT</button>
+    </div>
+    <div>
+        <h1 style="color: yellow; margin-left: 620px;"> __ . __</h1>
+    </div>
+
+
+
+    <div class="log" id="lo12">
+        <div class="input">
+            <p style="margin-left: 240px; color: white; font-size: 20px;" onclick="exit()">X</p>
+            <form>
+                <table>
+
+                    <tr>
+                        <td>EMAIL : </td>
+                        <td><input type="text" name="EMAIL" placeholder="YOUR MAIL" id="in2"></td>
+                    </tr>
+                    <tr>
+                        <td>PASS : </td>
+                        <td><input type="password" name="pass" placeholder="YOUR PASS" id="in3"></td>
+                    </tr>
+
+
+                </table>
+            </form>
+            <button style="margin-left: 90px; margin-top: 20px; font-size: 10px; height: 30px; width: 60px; background-color: cornflowerblue;"
+                onclick="log()">LOGIN</button>
+        </div>
+        <p style="margin-left: 40px; color: white;">Don't have account?<span style="color: yellow;" onclick="my2()">
+                SIGN UP</span></p>
+
+    </div>
+    <div class="log" id="lo2" style="display: none; margin-left: 980px; margin-top: -540px;">
+        <div class="input">
+            <p style="margin-left: 240px; color: white;  font-size: 20px" onclick="exit()">X</p>
+            <form>
+                <table>
+
+                    <tr>
+                        <td>EMAIL : </td>
+                        <td><input type="text" name="EMAIL" placeholder="YOUR MAIL" id="in4"></td>
+                    </tr>
+                    <tr>
+                        <td>PASS : </td>
+                        <td><input type="password" name="pass" placeholder="YOUR PASS" id="in5"></td>
+                    </tr>
+
+
+                </table>
+            </form>
+            <button style="margin-left: 90px; margin-top: 20px; font-size: 10px; height: 30px; width: 60px; background-color: cornflowerblue;"
+                onclick="reg()"> SIGN
+                UP</button>
+        </div>
+        <p style="margin-left: 90px; color: white; margin-top: 30px;"> Register here !!</p>
+
+    </div>
+
+    <div class="nav">
+        <p></p>
+
+
+        <a href="#">Home</a>
+        <a href="#">Our Services</a>
+        <a href="#">About Us</a>
+        <a href="#">Gallery</a>
+        <a href="#">Feedback</a>
+        <a href="#">Contact</a>
+        <a href="#" onclick="my()">Login</a>
+
+
+    </div>
+
+
+
+</body>
+<script>
+    var x = 1
+    function my() {
+
+        if (x == 1) {
+            document.getElementById('lo12').style.display = "block"
+            x = 2;
+            document.getElementById('lo2').style.display = "none"
+
+        }
+        else {
+            document.getElementById('lo12').style.display = "none"
+            x = 1
+            document.getElementById('lo2').style.display = "none"
+        }
+
+    }
+    function my2() {
+        document.getElementById('lo12').style.display = "none"
+        document.getElementById('lo2').style.display = "block"
+
+    }
+    function exit() {
+        document.getElementById('lo12').style.display = "none"
+        document.getElementById('lo2').style.display = "none"
+    }
+    function log() {
+
+        var email = document.getElementById('in2')
+        var pass = document.getElementById('in3')
+        let y = 0
+
+        if (email.value == "") {
+            alert("ENTER EMAIl")
+        }
+        else if (pass.value == "") {
+            alert("ENTER PASS")
+        }
+
+
+        else {
+            alert("FORM SUBMITTED")
+            y = 1
+
+        }
+        if (y == 1) {
+
+            pass.value = ""
+            email.value = ""
+
+        }
+
+
+
+
+    }
+    function reg() {
+
+        var email = document.getElementById('in4')
+        var pass = document.getElementById('in5')
+        let y = 0
+
+        if (email.value == "") {
+            alert("ENTER E-MAIl")
+        }
+        else if (pass.value == "") {
+            alert("ENTER PASS")
+        }
+
+
+        else {
+            alert("SUCCESSFULLy REGISTER")
+            y = 1
+
+        }
+        if (y == 1) {
+
+            pass.value = ""
+            email.value = ""
+
+        }
+
+
+
+
+    }
+</script>
+
+</html>
